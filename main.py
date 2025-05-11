@@ -9,7 +9,7 @@ qr = qrcode.QRCode(
     border=4,
 )
 
-if len(sys.argv) == 3:
+if len(sys.argv) >= 3:
     content = sys.argv[1]
     output = sys.argv[2]
 
@@ -32,5 +32,7 @@ if len(sys.argv) == 3:
 
         qr_code.paste(logo, (paste_w, paste_h))
         qr_code.save(output)
+    elif len(sys.argv) > 4:
+        print("Too many arguments! Aborting.")
 else:
     print("Invalid arguments! Aborting.")

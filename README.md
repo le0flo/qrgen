@@ -1,4 +1,4 @@
-# QRCode Generator
+# QRCode generator
 
 ### Requirements
 
